@@ -1,16 +1,21 @@
-const closed = document.getElementsByClassName('modal__close')[0];
+const show = document.querySelector('.show-success');
+const modal_showed = document.querySelectorAll('.modal');
 
-const modal = document.getElementById('modal_main');
-
-const success = document.getElementById('modal_success');
-const show = document.getElementsByClassName('show-success')[0];
-
-closed.onclick = () => {
-  modal.style.display = 'none';
-  success.style.display = 'none';
+show.onclick = function() {
+  modal_showed[0].classList.remove('modal_active');
+  modal_showed[1].classList.add('modal_active');
 }
 
-show.onclick = () => {
-	success.style.display = 'block';
-	modal.style.display = 'none';
+const closed = document.getElementsByClassName('modal__close');
+
+let firstElement = closed[0];
+
+let secondElement = closed[2];
+
+firstElement.onclick = () => {
+	modal_showed[0].classList.remove('modal_active');
+}
+
+secondElement.onclick = () => {
+	modal_showed[1].classList.remove('modal_active');
 }
