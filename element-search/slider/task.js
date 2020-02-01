@@ -1,7 +1,6 @@
 
 const body = document.body;
 const items = document.querySelectorAll('.slider__item');
-const dots = document.querySelectorAll('.slider__dots')
 const dot = document.querySelectorAll('.slider__dot')
 let currentSlide = 0;
 
@@ -60,8 +59,8 @@ body.addEventListener('click', event => {
 
 })
 
-for(let i = 0; i < dots[0].children.length; i++) {
-	dots[0].children[i].addEventListener('click', function() {
+for(let i = 0; i < dot.length; i++) {
+	dot[i].addEventListener('click', function() {
 		currentSlide = i;
 		
  	    if (event.target) {
