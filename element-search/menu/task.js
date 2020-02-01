@@ -1,7 +1,5 @@
 const menu = document.querySelector('.menu_main');
 
-// const menuSub = document.querySelectorAll('.menu_sub');
-
 
 
 menu.addEventListener('click', function(event) {
