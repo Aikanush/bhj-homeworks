@@ -17,7 +17,7 @@
   border-radius: 6px;
 }
 
-.dropdown__value:after {
+.dropdown__value::after {
   content: '\21E9';
   margin-left: 5px;
 }

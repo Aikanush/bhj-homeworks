@@ -1,25 +1,19 @@
-const menu = document.querySelector('.menu_main');
+const body = document.body;
 
 
 
-menu.addEventListener('click', function(event) {
+body.addEventListener('click', function(event) {
   let target = event.target;
 
   let targetParent = target.closest('.menu__item');
+  let subm = targetParent.getElementsByClassName('menu_sub')[0];
 
   if (targetParent) {
-    let subm = targetParent.getElementsByClassName('menu_sub')[0];
-    close();
     if (subm) {
-      subm.style.display = 'block';
+      subm.classList.toggle('menu_active');
       event.preventDefault();
     }
   }
 });
 
-function close() {
-  let s = document.getElementsByClassName('menu_sub');
-  for (let i = 0; i < s.length; i++) {
-    s[i].style.display = 'none';
-  }
-}
+
