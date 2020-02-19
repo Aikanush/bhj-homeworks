@@ -41,7 +41,7 @@ for(let i = 0; i < dot.length; i++) {
 }
 
 
-function slide(current) {
+function slide() {
     items[lastSlide].classList.remove('slider__item_active');
     dot[lastSlide].classList.remove('slider__dot_active');
     items[currentSlide].classList.add('slider__item_active');

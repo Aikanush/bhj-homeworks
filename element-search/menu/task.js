@@ -16,4 +16,9 @@ body.addEventListener('click', function(event) {
   }
 });
 
-
+// function close() {
+//   let s = document.getElementsByClassName('menu_sub');
+//   for (let i = 0; i < s.length; i++) {
+//     s[i].classList.remove('menu_active');
+//   }
+// }
