@@ -1,7 +1,5 @@
 window.onload = () => {
 
-  const body = document.body;
-
   const div = document.getElementsByClassName('reveal');
   function inViewPort(element){
     const viewportHeight = window.innerHeight;
@@ -9,10 +7,12 @@ window.onload = () => {
     return elementTop < viewportHeight;
   };
 
- body.addEventListener('scroll', ()=> {
-  for (var i = 0; i < div.length; i++) {
- 	if (inViewPort(div)) {
-  	   div[i].classList.toggle('reveal_active');
+ window.addEventListener('scroll', ()=> {
+  for (let i = 0; i < div.length; i++) {
+ 	if (inViewPort(div[i]) == true) {
+  	   div[i].classList.add('reveal_active');
+    } else {
+    	div[i].classList.remove('reveal_active');
     }
    }
  })
